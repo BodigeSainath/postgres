@@ -55,6 +55,14 @@ select current_ratio, ticker_symbol
 select sl.sector_id, su.subsector_name,max() from endeavour.sector_lookup sl join 
 endeavour.subsector_lookup su on sl.sector_id = su.sector_id
 
+--Get the Top 10 highest market cap stocks, with their Ticker names, Sector and Sub-Sector names
+select sl.ticker_name, sf.market_cap , dense_rank() over(order by sf.market_cap desc) as top_10,
+sl2.sector_name,sl3.subsector_name   from endeavour.stocks_lookup sl 
+join endeavour.stock_fundamentals sf on sl.ticker_symbol = sf.ticker_symbol
+join endeavour.sector_lookup sl2 on sf.sector_id = sl2.sector_id
+join endeavour.subsector_lookup sl3  on sf.subsector_id = sl3.subsector_id
+limit 10
+
 
 
 

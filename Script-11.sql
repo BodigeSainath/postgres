@@ -16,3 +16,5 @@ select address,name, max(salary) from company where address = 'Texas' group by a
 --Second highest salary
 select name,salary from company order by salary desc limit 2
 
+
+
