@@ -27,3 +27,4 @@ endeavour.stocks_price_history sp on sl.ticker_symbol = sp.ticker_symbol
 where sl.ticker_name like 'Visa%'
 and sp.trading_date in ('2015-12-16','2012-07-16','2013-09-16')
 
+

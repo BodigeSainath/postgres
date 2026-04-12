@@ -63,6 +63,15 @@ join endeavour.sector_lookup sl2 on sf.sector_id = sl2.sector_id
 join endeavour.subsector_lookup sl3  on sf.subsector_id = sl3.subsector_id
 limit 10
 
+-- get stock price history for nov23 where cur ratio >10 
+select * from endeavour.stocks_price_history sph join endeavour.stock_fundamentals sf 
+on sph.ticker_symbol = sf.ticker_symbol 
+where extract(year from sph.trading_date ) = 2023 and extract(month from sph.trading_date ) = 11
+
+select s.sector_id,s.sector_name, count(s.sector_id) from endeavour.stock_fundamentals sf 
+join endeavour.sector_lookup s on sf.sector_id  = s.sector_id group by s.sector_id,s.sector_name  ;
+
+select current_date;
 
 
 
