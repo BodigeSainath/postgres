@@ -1,0 +1,29 @@
+<!-- Assignment:
+1. ask user to enter a number, Check if that number is Even or Odd.
+2. ask user to enter 2 numbers, Find Largest of Two Numbers -->
+
+<script>
+    let num=prompt('Enter number')
+    num1=parseInt(num)
+    if(num1==0){
+        window.alert(`Number should be greater than 0`)
+    }
+    else if(num%2==0){
+        console.log(`${num1} is even`)
+    }
+    else{
+        console.log(`${num1} is odd`);
+    }
+
+    let a=prompt(`enter first number`)
+    let b=prompt(`enter second number`)
+    if(a==b){
+        console.log(`Number's should be different`)
+    }else if(a>b){
+        console.log(`${a} is largest`)
+    }else{
+        console.log(`${b} is largest`)
+    }
+
+
+</script>
