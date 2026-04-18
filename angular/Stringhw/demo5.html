@@ -1,0 +1,11 @@
+<!-- Shift the characters by the next character
+   input:  'abcxyz'
+   output: 'bcdyza' -->
+<script>
+    let input = "abcxyz";
+    let res = "";
+    for(let i=0;i<input.length;i++){
+        res=res+(input.charAt(i)+ 1);
+    }
+    console.log(res);
+</script>

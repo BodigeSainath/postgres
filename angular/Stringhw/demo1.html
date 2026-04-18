@@ -1,0 +1,36 @@
+ <!-- Print the occurence of each character in a string
+   input: 'entertainment'
+   output: { e:3 , n:2 , t: 3 ....} -->
+
+
+   <script>
+    let str = 'entertainment';
+    let arr= str.split('');
+    let res= 1;
+    for(word in str){
+        if(arr.indexOf(word)=== arr.lastIndexOf(word)){
+            res++;
+        }
+        if(res>1){
+            console.log(word +` : ${res}`);
+        }
+    }
+   </script>
+
+
+
+<!-- <script>
+    let string = `entertainment`;
+    let count = 0;
+    for(let i=0;i<string.length;i++)
+    {
+        for(let j=0;j<string.length;j++){
+            if(string[i]== string[j]){
+            count= count+1;
+            }
+        }
+        
+        console.log( ` ${string[i]} occur ${count}`);
+        count =0;
+    }
+</script> -->

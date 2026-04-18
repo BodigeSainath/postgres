@@ -1,0 +1,17 @@
+<!-- Swap The case for Each Character in a string 
+   input: 'Hello World'
+   output: 'hELLO wORLD' -->
+<script>
+    let string = 'Hello World';
+    let res="";
+    for(let i=0;i<string.length;i++){
+        let temp = string[i];
+        if(temp==temp.toLowerCase()){
+            res+=temp.toUpperCase();
+        }
+        else{
+            res+= temp.toLowerCase();
+        }
+    }
+    console.log(res);
+</script>

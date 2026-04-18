@@ -1,0 +1,20 @@
+<script>
+    let bikes =['Honda','Yamaha','Hero','ninja'];
+    for(let i=0;i<bikes.length;i++){
+        console.log(bikes[i]);
+    }
+
+    // 2 seconf way of for
+    for(i in bikes){
+        console.log(bikes[i]);
+    }
+    console.log("-----------------");
+    //for of
+    for(bike of bikes){
+        console.log(bike);
+    }
+    //foreach
+    bikes.forEach((value,index,bikes) =>{
+        console.log(value,index,bikes);
+    })
+</script>
