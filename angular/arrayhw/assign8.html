@@ -1,0 +1,11 @@
+<!-- 8. WAP to print the occurance of each elements 
+    input = [10,20,30,40,50,10,30,50]
+	output = {10:2, 20:1, 30:2 , 40:1, 50:2} -->
+<script>
+        input = [10,20,30,40,50,10,30,50];
+        let c = {};
+        input.forEach( (n) => {
+            c[n] = (c[n] || 0 ) + 1;
+        });
+        console.log(c);
+</script>

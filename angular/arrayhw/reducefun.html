@@ -1,0 +1,15 @@
+<Script>
+    let ar = [80,10,5.5,0,100,' Str',' React'];
+    let res = ar.reduce((prev,cur)=>{
+        console.log(prev,cur);
+        return prev+cur;
+    },0);
+    console.log(res);
+
+    let str = "React JS";
+    let revStr = str.split('').reduce((first,sec) =>{
+        console.log(first,sec);
+        return sec+first;
+    })
+    console.log(revStr);
+</Script>

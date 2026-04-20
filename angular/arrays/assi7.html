@@ -1,0 +1,18 @@
+<!-- add Dept info for each employee -->
+<script>
+employees = [{eId: 101, name: "sanjay", sal: 5000, gender: "male" },
+				{ eId: 104, name: "reena", sal: 8000, gender: "female" }]
+departments = [{ eId: 101, dept: "sales" },
+				{ eId: 104, dept: "marketing" }];
+let res = [];
+employees.forEach(emp => {
+    let dept = null;
+    departments.forEach( d => {
+        if (d.eId === emp.eId){
+            dept = d.dept;
+        }
+    });
+    res.push({ ...emp,dept});
+});
+console.log(res);
+</script>
